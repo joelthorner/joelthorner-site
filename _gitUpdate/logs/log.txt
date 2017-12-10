@@ -1,0 +1,12 @@
+
+
+Get all repositories from joelthorner 
+############# SUPERFAIL ERROR ############
+You have reached GitHub hour limit! Actual limit is: 60
+############# /SUPERFAIL ERROR ############
+[ERROR in save file  = false]
+
+############# SUPERFAIL ERROR ############
+Error password
+############# /SUPERFAIL ERROR ############
+[ERROR in save file  = false]

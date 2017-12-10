@@ -1,0 +1,355 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="Joel Bootstrap Gallery">
+    <meta name="author" content="Joel Thorner">
+
+    <title>Cool Change Cols - JoelThorner</title>
+    <link rel="icon" type="image/png" href="img/icon.png">
+
+    <!-- Bootstrap Core CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
+    <!-- Demo CSS -->
+    <link rel="stylesheet" href="css/cool-change-cols.css">
+
+    <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+        <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+        <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+    <![endif]-->
+
+</head>
+
+<body>
+
+    <!-- Navigation -->
+    <nav class="navbar navbar-inverse navbar-static-top" role="navigation">
+        <div class="container">
+            <!-- Brand and toggle get grouped for better mobile display -->
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+                    <span class="sr-only">Toggle navigation</span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+                <a class="navbar-brand" href="http://joelthorner.com/cool-change-cols/view/1-5-0">Cool change cols <span class="badge badge-primary">v1.5.0</span></a>
+            </div>
+            <!-- Collect the nav links, forms, and other content for toggling -->
+            <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+                <ul class="nav navbar-nav">
+                    <li class="active">
+                        <a href="index.html">Documentation</a>
+                    </li>
+                    <li>
+                        <a href="pages/demo1.html">Demo 1</a>
+                    </li>
+                    <li>
+                        <a href="pages/demo2.html">Demo 2</a>
+                    </li>
+                    <li>
+                        <a href="pages/demo3.html">Demo 3</a>
+                    </li>
+                </ul>
+            </div>
+            <!-- /.navbar-collapse -->
+        </div>
+        <!-- /.container -->
+    </nav>
+
+
+    <!-- Page Content -->
+    <div class="container">
+        <div class="row">
+            <div class="col-xs-9 col-xs-offset-3"><h1>Documentation</h1><hr/></div>
+        </div>
+        <div class="row">
+            
+        <div class="col-xs-3" style="text-align: right;position:fixed;padding-right: 30px;" data-spy="affix" data-offset-top="60" data-offset-bottom="200">
+            <h4>Get started</h4>
+            <ul class="list-unstyled">
+                <li><a href="#includes">Includes</a></li>
+                <li><a href="#css">Css</a></li>
+                <li><a href="#html">HTML</a></li>
+            </ul>
+            
+            <h4>API</h4>
+            <ul class="list-unstyled">
+                <li><a href="#options">Options</a></li>
+                <li><a href="#methods">Methods</a></li>
+                <li><a href="#events">Events</a></li>
+            </ul>
+            <h4>Download</h4>
+            <ul class="list-unstyled">
+                <li><a href="http://joelthorner/cool-change-cols/download/1-5-0">Download</a></li>
+            </ul>
+        </div>
+
+        <div class="col-xs-9 col-xs-offset-3">
+            <h2>Get started</h2>
+            <h3 id="includes">Includes</h3>
+<pre class="prettyprint">
+&lt;body&gt;
+    html content
+
+    &lt;!-- cookie js --&gt;
+    &lt;script src="https://cdnjs.cloudflare.com/ajax/libs/js-cookie/2.1.0/js.cookie.min.js"&gt;&lt;/script&gt;
+    &lt;!-- plugin js --&gt;
+    &lt;script src="js/cool-change-cols.min.js"&gt;&lt;/script&gt;
+&lt;/body&gt;
+</pre>
+            <hr/>
+
+            <h3 id="css">Css</h3>
+            <p>To prevent visual leaps, add <code>display:none;</code> to items, and a minimum height on item's container</p>
+<pre class="prettyprint">
+.itemsContainer{
+    min-height: 1000px; /* aprox ~ editable (min height) */
+}
+
+.itemDemoChange {
+    display: none;
+}
+</pre>
+            <hr/>
+
+            <h3 id="html">Html</h3>
+            <br/>
+            <h4>Controls</h4>
+            <p>Two attributes. <code>data-ccc-view-name</code> contains the name of view, the value saved in cookie.<br/>For each view needed <code>data-ccc-item-view</code>, containing the css classes of each item to change.<br/><br/>The controls can't be eliminated (performance) but can be hidden by css (<code>display: none;</code>)</p>
+<pre class="prettyprint">
+&lt;button type="button" 
+    data-ccc-view-name="grid" 
+    data-ccc-item-view="col-lg-3 col-md-4 col-xs-6 gridClass itemDemoChange"
+    &gt;Grid&lt;/button&gt;
+
+&lt;button type="button" 
+    data-ccc-view-name="list" 
+    data-ccc-item-view="col-lg-12 col-md-12 col-xs-12 listClass itemDemoChange"
+    &gt;List&lt;/button&gt;
+
+&lt;!-- optional for clear cookie --&gt;
+&lt;button type="button" 
+    onclick="Cookies.remove('cookie-name');"
+    &gt;Clear Cookie&lt;/button&gt;
+</pre>
+            <br/>
+            <h4>Items</h4>
+            <p>Only required a container and items with a class (important).<br/><br/>To change the appearance of the items you edit the CSS according to the classes of items.</p>
+<pre class="prettyprint">
+&lt;div class="row itemsContainer"&gt;
+    &lt;!-- itemDemoChange class is important for plugin init --&gt;
+    &lt;div class="itemDemoChange"&gt;
+        ...
+    &lt;/div&gt;
+&lt;/div&gt;
+</pre>
+            <hr/>
+            <br/>
+            <h2>API</h2>
+            <h3 id="options">Options</h3>
+            <table class="table table-bordered table-condensed">
+                <thead>
+                    <tr>
+                        <th>Name</th>
+                        <th>Type value</th>
+                        <th>Default</th>
+                        <th>Help</th>
+                        <th>Required!</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>activeDefault</td>
+                        <td>string</td>
+                        <td>null</td>
+                        <td>Default view active on load page, one of <code>data-ccc-view-name</code></td>
+                        <td class="required">Required!</td>
+                    </tr>
+                    <tr>
+                        <td>itemToChangeSelector</td>
+                        <td>string</td>
+                        <td>null</td>
+                        <td>Item common class. Example:<code>.itemDemoChange</code></td>
+                        <td class="required">Required!</td>
+                    </tr>
+                    <tr>
+                        <td>nameCookie</td>
+                        <td>string</td>
+                        <td>null</td>
+                        <td>Unique value for each change view system.</td>
+                        <td class="required">Required!</td>
+                    </tr>
+                    <tr>
+                        <td>classActiveButton</td>
+                        <td>string</td>
+                        <td>'active'</td>
+                        <td>Class of view active into control element</td>
+                        <td></td>
+                    </tr>
+                     <tr>
+                        <td>mobileView</td>
+                        <td>string</td>
+                        <td>null</td>
+                        <td>View active in mobile, one of <code>data-ccc-view-name</code>. If null, not change view in mobile.</td>
+                        <td></td>
+                    </tr>
+                    <tr>
+                        <td>mobileWidth</td>
+                        <td>number</td>
+                        <td>480</td>
+                        <td>Media query width of mobile version.</td>
+                        <td></td>
+                    </tr>
+                     <tr>
+                        <td>cookieDays</td>
+                        <td>number</td>
+                        <td>5</td>
+                        <td>Cookie days duration.</td>
+                        <td></td>
+                    </tr>
+                    <tr>
+                        <td>hideControlsOnMobile</td>
+                        <td>boolean</td>
+                        <td>false</td>
+                        <td>Hide views controls on enter mobile size.</td>
+                        <td></td>
+                    </tr>
+                    <tr>
+                        <td>effect</td>
+                        <td>boolean</td>
+                        <td>true</td>
+                        <td>Change view transition effect (fade).</td>
+                        <td></td>
+                    </tr>
+                    <tr>
+                        <td>timeEffect</td>
+                        <td>number</td>
+                        <td>300</td>
+                        <td>Effect duration.</td>
+                        <td>false</td>
+                    </tr>
+                </tbody>
+            </table>
+            <hr/>
+            <h3 id="methods">Methods</h3>
+            <p>Method to change a view.</p>
+<pre class="prettyprint">
+//normal init
+var options = {
+    nameCookie : 'name-cookie',
+    activeDefault : 'grid',
+    itemToChangeSelector : '.itemDemoChange'
+};
+
+$.fn.coolChangeCols(options);
+
+if(theEndIsNear){
+    //method to change a view (with the same options!)
+    $.fn.coolChangeCols(options, 'list');
+}
+</pre>
+            <hr/>
+            <h3 id="events">Events</h3>
+            <table class="table table-bordered table-condensed">
+                <thead>
+                    <tr>
+                        <th>Name</th>
+                        <th>Params</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>afterChangeView</td>
+                        <td>string: view</td>
+                    </tr>
+                    <tr>
+                        <td>afterLoadView</td>
+                        <td>string: view</td>
+                    </tr>
+                    <tr>
+                        <td>beforeChangeView</td>
+                        <td>string: view</td>
+                    </tr>
+
+                    <tr>
+                        <td>beforeLoadView</td>
+                        <td>string: view</td>
+                    </tr>
+                    <tr>
+                        <td>afterChangeViewMobile</td>
+                        <td>string: view</td>
+                    </tr>
+                    <tr>
+                        <td>afterOutViewMobile</td>
+                        <td>string: view</td>
+                    </tr>
+                </tbody>
+            </table>
+            <br/>
+            <h4>Example</h4>
+<pre class="prettyprint">
+var options = {
+    nameCookie : 'name-cookie',
+    activeDefault : 'grid',
+    itemToChangeSelector : '.itemDemoChange',
+
+    //add event
+    afterChangeView : function (view){
+        alert(view); //string
+    },
+};
+
+$.fn.coolChangeCols(options);
+</pre>
+        </div>
+
+
+        </div>
+
+        <hr>
+
+        <!-- Footer -->
+        <footer>
+            <div class="col-lg-12">
+                <p class="pull-left">Copyright &copy; JoelThorner 2016</p>
+                <p class="pull-right"><a href="https://twitter.com/joelthorner" target="_blank">@joelthorner</a></p>
+            </div>
+        </footer>
+
+    </div>
+    <!-- /.container -->
+
+    <!-- jQuery -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
+
+    <!-- Code highlighter-->
+    <script src="code_highlighter/google-code-prettify/prettify.js"></script>
+
+    <!-- Bootstrap Core JavaScript -->
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
+
+    <!--Cookie js-->
+    <script src="js/js.cookie.js"></script>
+    
+    <!--Joel Bootstrap Gallery Lib -->
+    <script src="js/cool-change-cols.js"></script>
+
+
+    <!-- demo -->
+    <script type="text/javascript">
+        
+        //code demo examples
+        prettyPrint();
+
+    </script>
+
+</body>
+
+</html>

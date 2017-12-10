@@ -1,0 +1,358 @@
+.nlcard {
+  overflow: hidden;
+  position: relative;
+  margin-bottom: .75rem;
+}
+.nlcard .nlcard-front {
+  overflow: hidden;
+  margin-bottom: 0rem;
+}
+.nlcard .nlcard-reverse {
+  overflow: hidden;
+  position: absolute;
+  margin-bottom: 0rem;
+}
+
+[data-toggle="nlcard-toggle"],
+[data-toggle="nlcard-closer"] {
+  cursor: pointer;
+}
+[data-toggle="nlcard-toggle"] .nlcard-reverse, [data-toggle="nlcard-toggle"] .nlcard-front,
+[data-toggle="nlcard-closer"] .nlcard-reverse,
+[data-toggle="nlcard-closer"] .nlcard-front {
+  -webkit-transition-delay: 0ms;
+  transition-delay: 0ms;
+}
+
+[data-hover="nlcard-hover"] .nlcard-reverse, [data-hover="nlcard-hover"] .nlcard-front {
+  -webkit-transition-delay: 100ms;
+  transition-delay: 100ms;
+}
+
+/* ----------- Slide ----------- */
+/* slideDown effect */
+.nlcard-slideDown .nlcard-reverse {
+  left: 0;
+  top: -100%;
+  width: 100%;
+  height: 100%;
+  -webkit-transition-property: top;
+  transition-property: top;
+  -webkit-transition-duration: 350ms;
+  transition-duration: 350ms;
+  -webkit-transition-timing-function: ease-in-out;
+  transition-timing-function: ease-in-out;
+}
+.nlcard-slideDown.open .nlcard-reverse {
+  top: 0;
+}
+
+/* slideUp effect */
+.nlcard-slideUp .nlcard-reverse {
+  left: 0;
+  bottom: -100%;
+  width: 100%;
+  height: 100%;
+  -webkit-transition-property: bottom;
+  transition-property: bottom;
+  -webkit-transition-duration: 350ms;
+  transition-duration: 350ms;
+  -webkit-transition-timing-function: ease-in-out;
+  transition-timing-function: ease-in-out;
+}
+.nlcard-slideUp.open .nlcard-reverse {
+  bottom: 0;
+}
+
+/* slideLeft effect */
+.nlcard-slideLeft .nlcard-reverse {
+  left: -100%;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  -webkit-transition-property: left;
+  transition-property: left;
+  -webkit-transition-duration: 350ms;
+  transition-duration: 350ms;
+  -webkit-transition-timing-function: ease-in-out;
+  transition-timing-function: ease-in-out;
+}
+.nlcard-slideLeft.open .nlcard-reverse {
+  left: 0;
+}
+
+/* slideRight effect */
+.nlcard-slideRight .nlcard-reverse {
+  right: -100%;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  -webkit-transition-property: right;
+  transition-property: right;
+  -webkit-transition-duration: 350ms;
+  transition-duration: 350ms;
+  -webkit-transition-timing-function: ease-in-out;
+  transition-timing-function: ease-in-out;
+}
+.nlcard-slideRight.open .nlcard-reverse {
+  right: 0;
+}
+
+/* ----------- Push ----------- */
+/* pushUp effect */
+.nlcard-pushUp .nlcard-reverse {
+  left: 0;
+  bottom: -100%;
+  width: 100%;
+  height: 100%;
+  -webkit-transition-property: bottom;
+  transition-property: bottom;
+  -webkit-transition-duration: 350ms;
+  transition-duration: 350ms;
+  -webkit-transition-timing-function: ease-in-out;
+  transition-timing-function: ease-in-out;
+}
+.nlcard-pushUp .nlcard-front {
+  -webkit-transition-property: -webkit-transform;
+  transition-property: transform;
+  -webkit-transition-duration: 350ms;
+  transition-duration: 350ms;
+  -webkit-transition-timing-function: ease-in-out;
+  transition-timing-function: ease-in-out;
+}
+.nlcard-pushUp.open .nlcard-front {
+  -webkit-transform: translateY(-100%);
+  -ms-transform: translateY(-100%);
+  transform: translateY(-100%);
+}
+.nlcard-pushUp.open .nlcard-reverse {
+  bottom: 0;
+}
+
+/* pushDown effect */
+.nlcard-pushDown .nlcard-reverse {
+  left: 0;
+  top: -100%;
+  width: 100%;
+  height: 100%;
+  -webkit-transition-property: top;
+  transition-property: top;
+  -webkit-transition-duration: 350ms;
+  transition-duration: 350ms;
+  -webkit-transition-timing-function: ease-in-out;
+  transition-timing-function: ease-in-out;
+}
+.nlcard-pushDown .nlcard-front {
+  -webkit-transition-property: -webkit-transform;
+  transition-property: transform;
+  -webkit-transition-duration: 350ms;
+  transition-duration: 350ms;
+  -webkit-transition-timing-function: ease-in-out;
+  transition-timing-function: ease-in-out;
+}
+.nlcard-pushDown.open .nlcard-front {
+  -webkit-transform: translateY(100%);
+  -ms-transform: translateY(100%);
+  transform: translateY(100%);
+}
+.nlcard-pushDown.open .nlcard-reverse {
+  top: 0;
+}
+
+/* pushRight effect */
+.nlcard-pushRight .nlcard-reverse {
+  left: -100%;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  -webkit-transition-property: left;
+  transition-property: left;
+  -webkit-transition-duration: 350ms;
+  transition-duration: 350ms;
+  -webkit-transition-timing-function: ease-in-out;
+  transition-timing-function: ease-in-out;
+}
+.nlcard-pushRight .nlcard-front {
+  -webkit-transition-property: -webkit-transform;
+  transition-property: transform;
+  -webkit-transition-duration: 350ms;
+  transition-duration: 350ms;
+  -webkit-transition-timing-function: ease-in-out;
+  transition-timing-function: ease-in-out;
+}
+.nlcard-pushRight.open .nlcard-front {
+  -webkit-transform: translateX(100%);
+  -ms-transform: translateX(100%);
+  transform: translateX(100%);
+}
+.nlcard-pushRight.open .nlcard-reverse {
+  left: 0;
+}
+
+/* pushLeft effect */
+.nlcard-pushLeft .nlcard-reverse {
+  right: -100%;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  -webkit-transition-property: right;
+  transition-property: right;
+  -webkit-transition-duration: 350ms;
+  transition-duration: 350ms;
+  -webkit-transition-timing-function: ease-in-out;
+  transition-timing-function: ease-in-out;
+}
+.nlcard-pushLeft .nlcard-front {
+  -webkit-transition-property: -webkit-transform;
+  transition-property: transform;
+  -webkit-transition-duration: 350ms;
+  transition-duration: 350ms;
+  -webkit-transition-timing-function: ease-in-out;
+  transition-timing-function: ease-in-out;
+}
+.nlcard-pushLeft.open .nlcard-front {
+  -webkit-transform: translateX(-100%);
+  -ms-transform: translateX(-100%);
+  transform: translateX(-100%);
+}
+.nlcard-pushLeft.open .nlcard-reverse {
+  right: 0;
+}
+
+/* ----------- 3D Flip ----------- */
+.nlcard-3DEffect-container {
+  -webkit-perspective: 800px;
+  perspective: 800px;
+}
+
+/* FlipRight */
+.nlcard-3DFlipRight {
+  overflow: visible;
+  -webkit-transform-style: preserve-3d;
+  transform-style: preserve-3d;
+  -webkit-transition-property: -webkit-transform;
+  transition-property: transform;
+  -webkit-transition-duration: 350ms;
+  transition-duration: 350ms;
+  -webkit-transition-timing-function: ease-in-out;
+  transition-timing-function: ease-in-out;
+}
+.nlcard-3DFlipRight .nlcard-reverse {
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  -webkit-backface-visibility: hidden;
+  backface-visibility: hidden;
+  -webkit-transform: rotateY(180deg);
+  transform: rotateY(180deg);
+  z-index: 3;
+}
+.nlcard-3DFlipRight .nlcard-front {
+  -webkit-backface-visibility: hidden;
+  backface-visibility: hidden;
+  z-index: 2;
+}
+.nlcard-3DFlipRight.open {
+  -webkit-transform: rotateY(-180deg);
+  transform: rotateY(-180deg);
+}
+
+/* FlipLeft */
+.nlcard-3DFlipLeft {
+  overflow: visible;
+  -webkit-transform-style: preserve-3d;
+  transform-style: preserve-3d;
+  -webkit-transition-property: -webkit-transform;
+  transition-property: transform;
+  -webkit-transition-duration: 350ms;
+  transition-duration: 350ms;
+  -webkit-transition-timing-function: ease-in-out;
+  transition-timing-function: ease-in-out;
+}
+.nlcard-3DFlipLeft .nlcard-reverse {
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  -webkit-backface-visibility: hidden;
+  backface-visibility: hidden;
+  -webkit-transform: rotateY(-180deg);
+  transform: rotateY(-180deg);
+  z-index: 3;
+}
+.nlcard-3DFlipLeft .nlcard-front {
+  -webkit-backface-visibility: hidden;
+  backface-visibility: hidden;
+  z-index: 2;
+}
+.nlcard-3DFlipLeft.open {
+  -webkit-transform: rotateY(180deg);
+  transform: rotateY(180deg);
+}
+
+/* FlipUp */
+.nlcard-3DFlipUp {
+  overflow: visible;
+  -webkit-transform-style: preserve-3d;
+  transform-style: preserve-3d;
+  -webkit-transition-property: -webkit-transform;
+  transition-property: transform;
+  -webkit-transition-duration: 350ms;
+  transition-duration: 350ms;
+  -webkit-transition-timing-function: ease-in-out;
+  transition-timing-function: ease-in-out;
+}
+.nlcard-3DFlipUp .nlcard-reverse {
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  -webkit-backface-visibility: hidden;
+  backface-visibility: hidden;
+  -webkit-transform: rotateX(-180deg);
+  transform: rotateX(-180deg);
+  z-index: 3;
+}
+.nlcard-3DFlipUp .nlcard-front {
+  -webkit-backface-visibility: hidden;
+  backface-visibility: hidden;
+  z-index: 2;
+}
+.nlcard-3DFlipUp.open {
+  -webkit-transform: rotateX(180deg);
+  transform: rotateX(180deg);
+}
+
+/* FlipDown */
+.nlcard-3DFlipDown {
+  overflow: visible;
+  -webkit-transform-style: preserve-3d;
+  transform-style: preserve-3d;
+  -webkit-transition-property: -webkit-transform;
+  transition-property: transform;
+  -webkit-transition-duration: 350ms;
+  transition-duration: 350ms;
+  -webkit-transition-timing-function: ease-in-out;
+  transition-timing-function: ease-in-out;
+}
+.nlcard-3DFlipDown .nlcard-reverse {
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  -webkit-backface-visibility: hidden;
+  backface-visibility: hidden;
+  -webkit-transform: rotateX(180deg);
+  transform: rotateX(180deg);
+  z-index: 3;
+}
+.nlcard-3DFlipDown .nlcard-front {
+  -webkit-backface-visibility: hidden;
+  backface-visibility: hidden;
+  z-index: 2;
+}
+.nlcard-3DFlipDown.open {
+  -webkit-transform: rotateX(-180deg);
+  transform: rotateX(-180deg);
+}

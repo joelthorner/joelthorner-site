@@ -1,0 +1,271 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<!-- Required meta tags always come first -->
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+	<meta http-equiv="x-ua-compatible" content="ie=edge">
+	<link rel="icon" type="image/png" href="img/icon.png">
+	<title>Next Level Cards (bt 4)! - joelthorner.com</title>
+
+	<!-- Bootstrap CSS -->
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.2/css/bootstrap.min.css" integrity="sha384-y3tfxAZXuh4HwSYylfB+J125MxIs6mR5FOHamPBG064zB+AFeWH94NdvaCBm8qnd" crossorigin="anonymous">
+	<!-- Icon font -->
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/material-design-iconic-font/2.2.0/css/material-design-iconic-font.min.css">
+	<!-- Demo css -->
+	<link rel="stylesheet" type="text/css" href="css/demo_page.css">
+	<!-- Nlcards css! -->
+	<link rel="stylesheet" type="text/css" href="css/nlcards.css">
+</head>
+<body>
+
+	<header>
+		<a href="http://joelthorner.com" target="_blank" class="logo">
+			<img src="img/logo.png" class="center-block">
+		</a>
+	</header>
+
+	<section class="container-fluid">
+
+		<label for="selectEffect">Change css transition!</label>
+		<select class="form-control" id="selectEffect">
+			<option disabled="">Slide</option>
+			<option value="slideDown">slideDown</option>
+			<option value="slideUp">slideUp</option>
+			<option value="slideLeft" selected="">slideLeft</option>
+			<option value="slideRight">slideRight</option>
+			<option disabled="">Push</option>
+			<option value="pushUp">pushUp</option>
+			<option value="pushDown">pushDown</option>
+			<option value="pushLeft">pushLeft</option>
+			<option value="pushRight">pushRight</option>
+			<option disabled="">Flip</option>
+			<option value="3DFlipRight">3DFlipRight</option>
+			<option value="3DFlipLeft">3DFlipLeft</option>
+			<option value="3DFlipUp">3DFlipUp</option>
+			<option value="3DFlipDown">3DFlipDown</option>
+		</select>
+
+	</section>
+	
+	<main class="container-fluid">
+		<div class="row" id="card-demo-1">
+			
+
+
+			<!-- DEMO [01] -->
+			<div class="col-xs-12 col nlcard-3DEffect-container">
+				<div class="nlcard nlcard-slideLeft">
+					<!-- card default view -->
+					<div class="card nlcard-front"  title="Open" data-toggle="nlcard-toggle">
+						<div class="card-block text-xs-right">
+							<h4 class="card-title"><span>SlideLeft</span> <i class="zmdi zmdi-comment-more"></i></h4>
+							<h6 class="card-subtitle text-muted">Umami pork belly kombucha leggings.</h6>
+						</div>
+						
+						<img class="card-img-top img-fluid" src="img/desk.jpg">
+
+						<ul class="list-group list-group-flush">
+							<li class="list-group-item"><i class="zmdi zmdi-desktop-windows zmdi-hc-lg zmdi-hc-fw"></i> Cras justo odio</li>
+							<li class="list-group-item"><i class="zmdi zmdi-laptop-chromebook zmdi-hc-lg zmdi-hc-fw"></i> Dapibus ac facilisis in</li>
+							<li class="list-group-item"><i class="zmdi zmdi-smartphone-android zmdi-hc-lg zmdi-hc-fw"></i> Vestibulum at eros</li>
+						</ul>
+					</div>
+
+					<!-- reverse card view -->
+					<div class="card card-inverse nlcard-reverse card-danger text-xs-center">
+						<button type="button" class="close" aria-label="Close" data-toggle="nlcard-closer">
+							<span aria-hidden="true">&times;</span>
+						</button>
+
+						<div class="card-block">
+							<blockquote class="card-blockquote">
+								<p>Banjo food truck intelligentsia, VHS chartreuse craft beer mlkshk master cleanse franzen DIY hella gochujang +1 brunch.</p>
+								<footer>Hipster in <cite title="Life">Life</cite></footer>
+							</blockquote>
+						</div>
+					</div>
+
+				</div><!-- /end card -->
+			</div><!-- /col -->
+
+
+
+		</div>
+		<div class="row" id="card-demo-2">
+
+
+
+			<!-- DEMO [02] -->
+			<div class="col-xs-12 col">
+				<div class="nlcard nlcard-slideDown">
+					<!-- card default view -->
+					<div class="card nlcard-front">
+						<img class="card-img-top img-fluid" src="img/beat.jpg" data-toggle="nlcard-toggle">
+						
+						<div class="card-block">
+							<h4 class="card-title">
+								<i class="zmdi zmdi-assignment-account"></i> 
+								SlideDown
+							</h4>
+							<p class="card-text">
+								Sartorial fashion axe messenger bag kombucha. Polaroid artisan lomo ethical austin tofu. Tousled tofu stumptown raw denim put a bird on it kickstarter.
+							</p>
+							<button class="btn btn-block" data-toggle="nlcard-toggle">
+								<i class="zmdi zmdi-mail-reply"></i> 
+								Open
+							</button>
+						</div>
+					</div>
+
+					<!-- reverse card view -->
+					<div class="card card-inverse nlcard-reverse">
+						<img class="card-img" src="img/beat.jpg">
+
+						<div class="card-img-overlay">
+							<h4 class="card-title">SlideDown</h4>
+							<p class="card-text">
+								Etsy semiotics hashtag, bushwick chartreuse offal photo booth neutra. Bushwick cronut semiotics fanny pack locavore schlitz. Wayfarers vice swag, cardigan hammock banh mi YOLO viral gluten-free kale chips trust fund.
+							</p>
+							<p class="card-text"><small class="text-muted">Last updated 300 years ago</small></p>
+							<button class="btn btn-info-outline btn-block" data-toggle="nlcard-closer">
+								Close
+							</button>
+						</div>
+					</div>
+
+				</div><!-- /end card -->
+			</div><!-- /col -->
+
+
+
+		</div>
+		<div class="row" id="card-demo-3">
+
+
+
+			<!-- DEMO [03] -->
+			<div class="col-xs-12 col">
+				<div class="nlcard nlcard-pushUp">
+					<!-- card default view -->
+					<div class="card nlcard-front">
+						<img class="card-img-top img-fluid" src="img/quicksilver.jpg" data-toggle="nlcard-toggle">
+						
+						<div class="card-block text-xs-center">
+							<h4 class="card-title">PushUp</h4>
+							<p class="card-text">
+								Photo booth pork belly stumptown salvia portland viral.
+							</p>
+							<button class="btn btn-warning btn-block" data-toggle="nlcard-toggle">Open</button>
+						</div>
+
+						<div class="card-footer text-muted">
+							7.25 days ago
+						</div>
+					</div>
+
+					<!-- reverse card view -->
+					<div class="card card-inverse nlcard-reverse" data-toggle="nlcard-closer" title="Close">
+						<img class="card-img" src="img/quicksilver.jpg">
+						
+						<div class="card-img-overlay">
+							<h4 class="card-title">Hipster title</h4>
+							<p class="card-text">Cliche tumblr consectetur butcher, odio non gastropub microdosing artisan whatever nulla. Fashion axe intelligentsia pariatur vice 3 wolf moon.</p>
+							<btn class="btn btn-warning-outline" data-toggle="nlcard-closer">Close</a>
+							</div>
+						</div>
+
+					</div><!-- /end card -->
+				</div><!-- /col -->
+
+
+			</div>
+			<div class="row" id="card-demo-4">
+
+
+
+				<!-- DEMO [04] -->
+				<div class="col-xs-12 col">
+					<div class="nlcard nlcard-pushDown" data-hover="nlcard-hover">
+						<!-- card default view -->
+						<div class="card card-inverse nlcard-front">
+
+							<div class="card-img-overlay">
+								<h4 class="card-title"> <i class="zmdi zmdi-hc-fw zmdi-apps"></i> PushDown [hover]</h4>
+								<p class="card-text">Dreams</p>
+								<p class="card-text"><small class="text-muted">Last updated 69 mins ago</small></p>
+							</div>
+						</div>
+
+						<!-- reverse card view -->
+						<div class="card nlcard-reverse">
+							<ul class="list-group list-group-flush">
+								<li class="list-group-item">Cras justo odio</li>
+								<li class="list-group-item">Dapibus ac facilisis in</li>
+								<li class="list-group-item">Vestibulum at eros</li>
+								<li class="list-group-item">Pop-up chillwave mustache</li>
+								<li class="list-group-item">8-bit knausgaard</li>
+								<li class="list-group-item">seitan viral kombucha</li>
+								<li class="list-group-item">heirloom hammock</li>
+								<li class="list-group-item">Humblebrag readymade fap</li>
+							</ul>
+						</div>
+
+					</div><!-- /end card -->
+				</div><!-- /col -->
+
+
+
+			</div>
+			<div class="row" id="card-demo-5">
+
+
+
+				<!-- DEMO [05] -->
+				<div class="col-xs-12 col nlcard-3DEffect-container">
+					<div class="nlcard nlcard-3DFlipRight">
+						<!-- card default view -->
+						<div class="card nlcard-front" data-toggle="nlcard-toggle">
+
+							<div class="card-block">
+								<h4 class="card-title">3D FlipRight <i class="zmdi zmdi-flip"></i></h4>
+								<p class="card-subtitle text-muted">Hammock officia leggings, consectetur vero raw denim normcore whatever elit synth four loko est polaroid.</p>
+							</div>
+
+							<img src="img/woman.jpg" alt="Card image" class="img-fluid">
+
+							<div class="card-block">
+								<p class="card-text">Hoodie irure pop-up banjo craft beer, mollit gentrify.</p>
+								<a href="#" class="card-link">Card link <i class="zmdi zmdi-link"></i></a>
+								<a href="#" class="card-link">Another link <i class="zmdi zmdi-link"></i></a>
+							</div>
+						</div>
+
+						<!-- reverse card view -->
+						<div class="card nlcard-reverse" data-toggle="nlcard-toggle">
+							<img class="card-img" src="img/woman.jpg">
+
+							<div class="card-img-overlay">
+								<h4 class="card-title">Starbucks</h4>
+								<p class="card-text">Ethical freegan knausgaard sriracha marfa, hoodie wayfarers godard. Neutra butcher biodiesel vinyl, chia keytar bushwick shabby chic pour-over sriracha. </p>
+							</div>
+						</div>
+
+					</div><!-- /end card -->
+				</div><!-- /col -->
+
+
+
+			</div><!-- /row -->
+
+		</main>
+
+		<!-- jQuery first, then Bootstrap JS. -->
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
+		<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.2/js/bootstrap.min.js" integrity="sha384-vZ2WRJMwsjRMW/8U7i6PWi6AlO1L79snBrmgiDpgIWJ82z8eA5lenwvxbMV1PAh7" crossorigin="anonymous"></script>
+		<!-- nlcard js -->
+		<script src="js/nlcards.js"></script>
+		<!-- demo page js -->
+		<script src="js/demo.js"></script>
+	</body>
+	</html>

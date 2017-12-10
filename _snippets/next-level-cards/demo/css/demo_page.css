@@ -1,0 +1,224 @@
+/* color btn mixin */
+/* ---------- */
+* {
+  outline: none !important;
+  border-radius: 0rem !important;
+}
+
+.btn {
+  transition: all 200ms ease-in-out;
+}
+
+.col {
+  max-width: 350px;
+  margin: 0 auto;
+  float: none;
+}
+
+.logo {
+  display: block;
+  max-width: 150px;
+  margin: 0 auto;
+}
+.logo img {
+  width: 100%;
+}
+
+header {
+  background-color: #f30709;
+  padding: 0.6rem;
+}
+
+section {
+  color: #DDD;
+  background-color: #050507;
+  padding: 0.5rem 0rem 1rem;
+  font-size: 0.8rem;
+  text-align: center;
+}
+section select {
+  max-width: 300px;
+  margin: 0 auto;
+}
+section select option[disabled] {
+  font-size: small;
+  color: #DDD;
+}
+
+main {
+  font-size: 0.9rem;
+}
+main .row {
+  padding-top: 8rem;
+  padding-bottom: 8rem;
+}
+
+.card-block, ul, .card-text {
+  font-size: 0.8rem;
+}
+
+.nlcard-reverse, .nlcard-front {
+  border: none;
+}
+
+#card-demo-1 {
+  background-color: #3e4152;
+}
+
+#card-demo-2 {
+  background-color: #2d303f;
+}
+
+#card-demo-3 {
+  background-color: #272a39;
+}
+
+#card-demo-4 {
+  background-color: #2d303f;
+}
+
+#card-demo-5 {
+  background-color: #3e4152;
+}
+
+#card-demo-6 {
+  background-color: #2d303f;
+}
+
+#card-demo-7 {
+  background-color: #3e4152;
+}
+
+#card-demo-8 {
+  background-color: #2d303f;
+}
+
+#card-demo-9 {
+  background-color: #272a39;
+}
+
+#card-demo-1 .nlcard-reverse {
+  background-color: #f30709;
+}
+#card-demo-1 .nlcard-reverse .card-block {
+  position: absolute;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  margin: auto;
+  display: table;
+}
+#card-demo-1 .nlcard-reverse .close {
+  padding: .7rem 1rem;
+  font-size: 1.8rem;
+}
+
+#card-demo-2 .nlcard-front .btn {
+  color: #FFF;
+  background-color: #3e4152;
+  border-color: #3e4152;
+}
+#card-demo-2 .nlcard-front .btn:hover, #card-demo-2 .nlcard-front .btn:focus, #card-demo-2 .nlcard-front .btn:active, #card-demo-2 .nlcard-front .btn.active, .open > #card-demo-2 .nlcard-front .btn.dropdown-toggle {
+  color: #FFF;
+  background-color: #272a39;
+  border-color: #272a39;
+}
+#card-demo-2 .nlcard-front .btn:active, #card-demo-2 .nlcard-front .btn.active, .open > #card-demo-2 .nlcard-front .btn.dropdown-toggle {
+  background-image: none;
+}
+#card-demo-2 .nlcard-front .btn.disabled, #card-demo-2 .nlcard-front .btn.disabled:hover, #card-demo-2 .nlcard-front .btn.disabled:focus, #card-demo-2 .nlcard-front .btn.disabled:active, #card-demo-2 .nlcard-front .btn.disabled.active, #card-demo-2 .nlcard-front .btn[disabled], #card-demo-2 .nlcard-front .btn[disabled]:hover, #card-demo-2 .nlcard-front .btn[disabled]:focus, #card-demo-2 .nlcard-front .btn[disabled]:active, #card-demo-2 .nlcard-front .btn[disabled].active, fieldset[disabled] #card-demo-2 .nlcard-front .btn, fieldset[disabled] #card-demo-2 .nlcard-front .btn:hover, fieldset[disabled] #card-demo-2 .nlcard-front .btn:focus, fieldset[disabled] #card-demo-2 .nlcard-front .btn:active, fieldset[disabled] #card-demo-2 .nlcard-front .btn.active {
+  background-color: #3e4152;
+  border-color: #3e4152;
+}
+#card-demo-2 .nlcard-reverse .btn {
+  color: #FFF;
+  background-color: transparent;
+  border-color: #FFF;
+}
+#card-demo-2 .nlcard-reverse .btn:hover, #card-demo-2 .nlcard-reverse .btn:focus, #card-demo-2 .nlcard-reverse .btn:active, #card-demo-2 .nlcard-reverse .btn.active, .open > #card-demo-2 .nlcard-reverse .btn.dropdown-toggle {
+  color: #FFF;
+  background-color: #050507;
+  border-color: #050507;
+}
+#card-demo-2 .nlcard-reverse .btn:active, #card-demo-2 .nlcard-reverse .btn.active, .open > #card-demo-2 .nlcard-reverse .btn.dropdown-toggle {
+  background-image: none;
+}
+#card-demo-2 .nlcard-reverse .btn.disabled, #card-demo-2 .nlcard-reverse .btn.disabled:hover, #card-demo-2 .nlcard-reverse .btn.disabled:focus, #card-demo-2 .nlcard-reverse .btn.disabled:active, #card-demo-2 .nlcard-reverse .btn.disabled.active, #card-demo-2 .nlcard-reverse .btn[disabled], #card-demo-2 .nlcard-reverse .btn[disabled]:hover, #card-demo-2 .nlcard-reverse .btn[disabled]:focus, #card-demo-2 .nlcard-reverse .btn[disabled]:active, #card-demo-2 .nlcard-reverse .btn[disabled].active, fieldset[disabled] #card-demo-2 .nlcard-reverse .btn, fieldset[disabled] #card-demo-2 .nlcard-reverse .btn:hover, fieldset[disabled] #card-demo-2 .nlcard-reverse .btn:focus, fieldset[disabled] #card-demo-2 .nlcard-reverse .btn:active, fieldset[disabled] #card-demo-2 .nlcard-reverse .btn.active {
+  background-color: transparent;
+  border-color: #FFF;
+}
+#card-demo-2 .nlcard-reverse .card-img {
+  max-width: none;
+  max-height: 100%;
+}
+#card-demo-2 .nlcard-reverse [data-toggle="nlcard-closer"] {
+  width: calc(100% - 2.5rem);
+  position: absolute;
+  bottom: 1.25rem;
+  left: 1.25rem;
+  right: 1.25rem;
+}
+
+#card-demo-3 .nlcard-front .btn {
+  color: #FFF;
+  background-color: #1e9fb5;
+  border-color: #1e9fb5;
+}
+#card-demo-3 .nlcard-front .btn:hover, #card-demo-3 .nlcard-front .btn:focus, #card-demo-3 .nlcard-front .btn:active, #card-demo-3 .nlcard-front .btn.active, .open > #card-demo-3 .nlcard-front .btn.dropdown-toggle {
+  color: #FFF;
+  background-color: #51b5c5;
+  border-color: #51b5c5;
+}
+#card-demo-3 .nlcard-front .btn:active, #card-demo-3 .nlcard-front .btn.active, .open > #card-demo-3 .nlcard-front .btn.dropdown-toggle {
+  background-image: none;
+}
+#card-demo-3 .nlcard-front .btn.disabled, #card-demo-3 .nlcard-front .btn.disabled:hover, #card-demo-3 .nlcard-front .btn.disabled:focus, #card-demo-3 .nlcard-front .btn.disabled:active, #card-demo-3 .nlcard-front .btn.disabled.active, #card-demo-3 .nlcard-front .btn[disabled], #card-demo-3 .nlcard-front .btn[disabled]:hover, #card-demo-3 .nlcard-front .btn[disabled]:focus, #card-demo-3 .nlcard-front .btn[disabled]:active, #card-demo-3 .nlcard-front .btn[disabled].active, fieldset[disabled] #card-demo-3 .nlcard-front .btn, fieldset[disabled] #card-demo-3 .nlcard-front .btn:hover, fieldset[disabled] #card-demo-3 .nlcard-front .btn:focus, fieldset[disabled] #card-demo-3 .nlcard-front .btn:active, fieldset[disabled] #card-demo-3 .nlcard-front .btn.active {
+  background-color: #1e9fb5;
+  border-color: #1e9fb5;
+}
+#card-demo-3 .nlcard-reverse .card-img {
+  max-width: none;
+  max-height: 100%;
+}
+#card-demo-3 .nlcard-reverse .btn {
+  color: #1e9fb5;
+  background-color: transparent;
+  border-color: #1e9fb5;
+}
+#card-demo-3 .nlcard-reverse .btn:hover, #card-demo-3 .nlcard-reverse .btn:focus, #card-demo-3 .nlcard-reverse .btn:active, #card-demo-3 .nlcard-reverse .btn.active, .open > #card-demo-3 .nlcard-reverse .btn.dropdown-toggle {
+  color: #FFF;
+  background-color: #1e9fb5;
+  border-color: #1e9fb5;
+}
+#card-demo-3 .nlcard-reverse .btn:active, #card-demo-3 .nlcard-reverse .btn.active, .open > #card-demo-3 .nlcard-reverse .btn.dropdown-toggle {
+  background-image: none;
+}
+#card-demo-3 .nlcard-reverse .btn.disabled, #card-demo-3 .nlcard-reverse .btn.disabled:hover, #card-demo-3 .nlcard-reverse .btn.disabled:focus, #card-demo-3 .nlcard-reverse .btn.disabled:active, #card-demo-3 .nlcard-reverse .btn.disabled.active, #card-demo-3 .nlcard-reverse .btn[disabled], #card-demo-3 .nlcard-reverse .btn[disabled]:hover, #card-demo-3 .nlcard-reverse .btn[disabled]:focus, #card-demo-3 .nlcard-reverse .btn[disabled]:active, #card-demo-3 .nlcard-reverse .btn[disabled].active, fieldset[disabled] #card-demo-3 .nlcard-reverse .btn, fieldset[disabled] #card-demo-3 .nlcard-reverse .btn:hover, fieldset[disabled] #card-demo-3 .nlcard-reverse .btn:focus, fieldset[disabled] #card-demo-3 .nlcard-reverse .btn:active, fieldset[disabled] #card-demo-3 .nlcard-reverse .btn.active {
+  background-color: transparent;
+  border-color: #1e9fb5;
+}
+
+#card-demo-4 .nlcard-front {
+  height: 420px;
+  border: none;
+  background-image: url("../img/red.jpg");
+  background-size: cover;
+  background-position: center;
+}
+#card-demo-4 .nlcard-front .card-text, #card-demo-4 .nlcard-front .text-muted, #card-demo-4 .nlcard-front h4 {
+  color: #FFF;
+  background-color: #3e4152;
+  display: table;
+  padding: 3px;
+}
+
+#card-demo-5 .nlcard-reverse {
+  color: #666;
+  text-align: center;
+}
+#card-demo-5 .nlcard-reverse .card-img {
+  max-width: none;
+  height: 100%;
+  margin-left: -50%;
+}

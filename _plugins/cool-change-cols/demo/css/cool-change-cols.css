@@ -1,0 +1,231 @@
+/* ------- NECESSARY CSS ---------*/
+
+.itemsContainer{
+	min-height: 1000px; /* aprox ~ editable (min height) */
+}
+
+.itemDemoChange {
+	display: none;
+}
+
+/* For each view class is necessary define css properties !! */
+
+
+
+
+/* ---------------------- DEMOs CSS -------------------------- */
+
+
+body {
+	background-color: #101010;
+	color: #9E9E9E;
+}
+
+body .well {
+	min-height: 136px;
+}
+
+pre{
+	font-size: 11px;
+}
+
+code{
+	color: #FF0041;
+	background-color: transparent;
+}
+
+body .thumbnail, body .well{
+	background-color: #222;
+	border-color: #0E0E0E;
+}
+body .btn{
+	border-radius: 0px;
+}
+body .thumbnail p, body .well {
+	color: #888;
+}
+
+body hr {
+	border-color: #333;
+}
+
+table.table, table.table * {
+	border-color: #333 !important;
+	font-size: 12px;
+}
+td.required{
+	color: #337ab7;
+}
+div.thumbnail h3{
+	margin-bottom: 0px;
+	color: #FFF;
+}
+ #controls p{
+	font-family: Monospace;
+}
+
+.thumbnail a>img, .thumbnail>img {
+	margin-right: auto;
+	margin-left: auto;
+	padding: 20px;
+	width: 100%;
+	max-width: 200px;
+}
+.thumbnail a>img:hover, .thumbnail>img:hover {
+	-webkit-animation-name: wobble;
+	animation-name: wobble;
+
+	-webkit-animation-duration: 800ms;
+	animation-duration: 800ms;
+
+	-webkit-animation-fill-mode: both;
+	animation-fill-mode: both;
+}
+
+@keyframes wobble {
+	0% {
+		-webkit-transform: none;
+		transform: none
+	}
+	15% {
+		-webkit-transform: translate3d(-15%, 0, 0) rotate3d(0, 0, 1, -5deg);
+		transform: translate3d(-15%, 0, 0) rotate3d(0, 0, 1, -5deg)
+	}
+	30% {
+		-webkit-transform: translate3d(12%, 0, 0) rotate3d(0, 0, 1, 3deg);
+		transform: translate3d(12%, 0, 0) rotate3d(0, 0, 1, 3deg)
+	}
+	45% {
+		-webkit-transform: translate3d(-10%, 0, 0) rotate3d(0, 0, 1, -3deg);
+		transform: translate3d(-10%, 0, 0) rotate3d(0, 0, 1, -3deg)
+	}
+	60% {
+		-webkit-transform: translate3d(8%, 0, 0) rotate3d(0, 0, 1, 2deg);
+		transform: translate3d(8%, 0, 0) rotate3d(0, 0, 1, 2deg)
+	}
+	75% {
+		-webkit-transform: translate3d(-6%, 0, 0) rotate3d(0, 0, 1, -1deg);
+		transform: translate3d(-6%, 0, 0) rotate3d(0, 0, 1, -1deg)
+	}
+	100% {
+		-webkit-transform: none;
+		transform: none
+	}
+}
+
+#controls p {
+	font-size: small;
+	margin-top: 15px;
+}
+
+.listClass div.thumbnail img {
+	width: 50%;
+	float: left;
+	margin: 0px 15px 0px 0px;
+}
+
+@media(max-width: 481px){
+	.listClass div.thumbnail img {
+		margin-bottom: 15px;
+		max-width: 200px;
+	}
+}
+
+.listClass div.thumbnail {
+	height: auto;
+	position: relative;
+	overflow: hidden;
+}
+
+/* demo3 */
+
+.circle .thumbnail{
+	border-radius: 50% 5% !important;
+	overflow: hidden;
+	text-align: center;
+}
+
+.circle .thumbnail img{
+	max-height: 255px;
+	width: 100%;
+}
+
+.circle .thumbnail p {
+	width: 50%;
+	margin: 10px auto;
+}
+
+.square .thumbnail{
+	border-radius: 0% !important;
+	overflow: hidden;
+}
+
+.to-big .thumbnail p, .to-big .thumbnail h3{
+	display: none;
+}
+
+.to-big .thumbnail>img{
+	max-width: 100%;
+	padding: 10%;
+}
+
+/* Pretty printing styles. Used with prettify.js.
+ *
+ * This version is slight modified based on the original version.
+ *
+ * Name:    Stanley Ng
+ * Email:   stanleyhlng@googlegroups.com
+ * 
+ * Reference:
+ * http://code.google.com/p/google-code-prettify/source/browse/trunk/src/prettify.css
+ */
+.pln {
+  color: #48484C; }
+
+.str {
+  color: #DD1144; }
+
+.kwd {
+  color: #2f6f9f; }
+
+.com {
+  color: #999; }
+
+.typ {
+  color: teal; }
+
+.lit {
+  color: #4f9fcf; }
+
+.pun {
+  color: #93A1A1; }
+
+.opn {
+  color: #93A1A1; }
+
+.clo {
+  color: #93A1A1; }
+
+.tag {
+  color: #2f6f9f; }
+
+.atn {
+  color: #4f9fcf; }
+
+.atv {
+  color: #d44950; }
+
+.dec {
+  color: teal; }
+
+.var {
+  color: teal; }
+
+.fun {
+  color: #DC322F; }
+
+/* Put a border around prettyprinted code snippets. */
+pre.prettyprint{
+  border-radius: 0px;
+  font-size: 11px;
+}

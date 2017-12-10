@@ -1,0 +1,40 @@
+<IfModule mod_rewrite.c>
+	# Options -Indexes
+	
+	# RewriteEngine On
+	# RewriteBase /
+	# RewriteCond %{REQUEST_FILENAME} !-f
+	# RewriteCond %{REQUEST_FILENAME} !-d
+	# RewriteRule ^(.*)$ /JOELTHORNER/index.php/$1 [L]
+
+	# Redirect 301 /JOELTHORNER/simplebtchecks/index /JOELTHORNER/simplebtchecks/
+
+
+
+	Options -Indexes
+	RewriteEngine on
+
+	RewriteRule ^([a-z0-9_-]+)\.html$ index.php/page/$1 [L]
+
+	RewriteCond %{REQUEST_FILENAME} !-f
+	RewriteCond %{REQUEST_FILENAME} !-d
+	RewriteCond $1 !^(index\.php|asset|robots\.txt)
+	RewriteRule ^(.*)$ index.php?/$1 [L]
+
+	
+</IfModule>
+
+# BEGIN EXPIRES
+<IfModule mod_expires.c>
+	# ExpiresActive On
+	# ExpiresDefault "access plus 10 days"
+	# ExpiresByType text/css "access plus 1 hour"
+	# ExpiresByType text/plain "access plus 1 month"
+	ExpiresByType image/gif "access plus 4 hour"
+	ExpiresByType image/png "access plus 4 hour"
+	ExpiresByType image/jpeg "access plus 4 hour"
+	# ExpiresByType application/x-javascript "access plus 1 month"
+	# ExpiresByType application/javascript "access plus 1 week"
+	ExpiresByType application/x-icon "access plus 1 year"
+</IfModule>
+# END EXPIRES

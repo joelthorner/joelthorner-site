@@ -1,0 +1,384 @@
+$transition-menu : cubic-bezier(.45,-0.01,.31,.97);
+body{
+	@media(min-width: 992px){
+		padding-left: $menu-w;
+	}
+	padding-left: 0;
+	transition: padding-left 500ms $transition-menu;
+	@media(max-width: 991px){
+		&.open-menu #main-content{
+			// transform: translateX($menu-w);
+		}
+		#main-content{
+			// transform: translateX(0);
+			// transition: transform 500ms $transition-menu;
+		}
+	}
+	@media(min-width: 992px){
+
+		&#body-plugin, &#body-snippet{
+			padding-left: 0;
+			overflow: hidden;
+			#main-content{			
+				transition: all 500ms $transition-menu;
+			}
+			&.open-menu{
+				#main-content{
+					transform: translateX($menu-w - 50px);
+				}
+				#menuTogglerSmall{
+					transform: translateX(100%);
+				}
+			}
+		}
+	}
+}
+#menu-toggler, .md-close, #menuTogglerSmall{
+	@media(min-width: 992px){
+		transform: translateX(0);
+		z-index: 101;
+		display: none;
+	}
+	transition: transform 500ms $transition-menu 250ms, background-color 350ms ease 0s;
+	position: absolute;
+	right: 0;
+	top: 0;
+	height: 71px;
+	width: 71px;
+	background-color: rgba(0,0,0,.2);
+	transform: translateX(100%);
+	cursor: pointer;
+	z-index: 103;
+
+	body.open-menu &{
+		transform: translateX(0);
+		transition-delay: 0s;
+		background-color: transparent;
+	}
+
+	.inset{
+		padding: 17px 19px;
+		animation: menu_rotate_t .35s ease;
+		animation-fill-mode: both;
+		body.open-menu &{
+			animation: menu_rotate_inv_t .35s ease;
+			animation-fill-mode: both;
+		}
+		&.init{
+			animation: none;
+		}
+	}
+	.line{
+		display: block;
+		width: 100%;
+		height: 3px;
+		background-color: #fff;
+		margin: 7px 0;
+		// cross eff
+		transition: transform 350ms ease, opacity 350ms ease;
+		transform: translateY(0) rotate(0);
+		opacity: 1;
+
+		&.line-1{
+			body.open-menu &, .md-modal &{
+				transform: translateY(10px) rotate(45deg);
+			}
+		}
+		&.line-2{
+			body.open-menu &, .md-modal &{
+				opacity: 0;
+			}
+		}
+		&.line-3{
+			body.open-menu &, .md-modal &{
+				transform: translateY(-10px) rotate(-45deg);
+			}
+		}
+	}
+	&:hover{
+		background-color: rgba(0,0,0,.35);
+		body.open-menu &{
+			background-color: rgba(0,0,0,.1);
+		}
+		.line {
+			animation: shake_hover 2s ease;
+			animation-fill-mode: both;
+			body.open-menu &, html.touchevents &{
+				animation: none;
+			}
+			&.line-1{
+				animation-delay: 0;
+			}
+			&.line-2{
+				animation-delay: 0.1s;
+			}
+			&.line-3{
+				animation-delay: 0.2s;
+			}
+		}
+	}
+}
+#menu{
+	width: $menu-w;
+	height: 100%;
+	position: fixed;
+	// position: absolute;
+	z-index: 110;
+	top: 0;
+	left: 0;
+	background-color: $menu-bg-2;
+	transition: transform 500ms $transition-menu;
+	@media(min-width: 992px){
+		transform: translateX(0);
+	}
+	transform: translateX(-100%);
+	body.open-menu &{
+		transform: translateX(0);
+	}
+	@media(min-width: 992px){
+		body#body-plugin.open-menu &,
+		body#body-snippet.open-menu &{
+			transform: translateX(0);
+		}
+		body#body-snippet &,
+		body#body-plugin &{
+			transform: translateX(-100%);
+		}
+	}
+	.inset{
+		overflow-y: auto;
+	}
+
+	.logo-section{
+		background-color: $menu-bg-1;
+		padding: 25px;
+		position: relative;
+		z-index: 102;
+	}
+
+	.menu-section {
+		margin: 25px 0;
+		text-shadow: 0px 1px 0px rgba(0, 0, 0, 0.5);
+		li, li a{
+			@include clearfix;
+		}
+		> ul > li{
+			position: relative;
+			padding: 8px 25px;
+			transition: background-color 350ms ease;
+			&.open{
+				background-color: $menu-bg-1;
+				> a > i{
+					color: $blue;
+				}
+			}
+		}
+		[data-toggle="collapse"]{
+			animation: menu_rotate .35s ease;
+			animation-fill-mode: both;
+			&.collapsed{
+				animation: menu_rotate_inv .35s ease;
+				animation-fill-mode: both;
+			}
+			&.init{
+				animation: none;
+			}
+		}
+		[data-toggle="collapse"] + div {
+			li{
+				padding-left: 25px;
+				font-size: 12px;
+			}
+			a:last-child{
+				padding-bottom: 4px;
+			}
+		}
+		@mixin selectedAMenu{
+			> .title{
+				color: $menu-txt-h;
+			}
+			> i{
+				color: $blue;
+			}
+		}
+		.thisZone > a{
+			@include selectedAMenu;
+		}
+		a{
+			color: $menu-txt;
+			display: block;
+			padding: 7px 0px;
+
+			&:focus, &:hover{
+				@include selectedAMenu;
+			}
+
+			+ a{
+				position: absolute;
+				top: 8px;
+				right: 25px - 7px;
+				> i{
+					padding-left: 7px;
+					padding-right: 7px;
+				}
+			}
+			> i, > .title {
+				display: block;
+				float: left;
+				transition: color 350ms ease;
+			}
+			> .title {
+				padding: 2px 8px;
+			}
+		}
+	}
+
+	.working-on{
+		padding: 25px;
+		.title{
+			color: #FFF;
+			display: block;
+			margin-bottom: 15px;
+		}
+		p{
+			color: $menu-txt;
+			text-shadow: 0 1px 0 rgba(0,0,0,.5);
+			font-size: 12px;
+		}
+	}
+
+	/* search */
+	.search{
+		background-color: $menu-bg-1;
+		padding: 25px;
+		position: relative;
+
+		.text{
+			color: #FFF;
+			display: block;
+			margin-bottom: 15px;
+		}
+		.search-input{
+			border-radius: 0;
+			background-color: rgba(0,0,0,0.2);
+			border-color: transparent;
+
+			&:focus{
+				box-shadow: none;
+				border-color: transparent transparent $blue transparent;
+			}
+			@include placeholder-color(#555);
+		}
+		#menu-search-output{
+			position: absolute;
+			top: 100%;
+			width: 100%;
+			left: 0;
+			right: 0;
+			.scroll-element{
+				z-index: 115;
+			}
+			.results-search{
+				background-color: $blue;
+				padding: 8px 0;
+				&.results-0{
+					padding: 0;
+				}
+			}
+
+			a{
+				padding: 8px 25px;
+				display: block;
+				color: #FFF;
+				&:hover{
+					background-color: darken($blue, 20%);
+				}
+			}
+		}
+		.input-wraper{
+			position: relative;
+		}
+		button.clear{
+			border: 0;
+			padding: 0;
+			line-height: 0;
+			position: absolute;
+			top: 0;
+			right: 0;
+			height: 34px;
+			width: 34px;
+			background: transparent;
+			&:hover, &:focus{
+				color: $blue;
+			}
+		}
+	}/* / .search */
+}
+
+@keyframes menu_rotate {
+	0%{
+		transform: rotate(0);
+	}
+	100%{
+		transform: rotate(450deg);
+	}
+}
+@keyframes menu_rotate_inv {
+	0%{
+		transform: rotate(450deg);
+	}
+	100%{
+		transform: rotate(0);
+	}
+}
+@keyframes shake_hover {
+	from, to {
+		transform: translate3d(0, 0, 0);
+	}
+
+	10%, 30%, 50%, 70%, 90% {
+		transform: translate3d(-3px, 0, 0);
+	}
+
+	20%, 40%, 60%, 80% {
+		transform: translate3d(3px, 0, 0);
+	}
+}
+@keyframes menu_rotate_t {
+	0%{
+		transform: rotate(0);
+	}
+	100%{
+		transform: rotate(360deg);
+	}
+}
+@keyframes menu_rotate_inv_t {
+	0%{
+		transform: rotate(360deg);
+	}
+	100%{
+		transform: rotate(0);
+	}
+}
+
+// menu plugin small
+#menuTogglerSmall{
+	display: block;
+	height: 51px;
+	width: 50px;
+	background-color: rgba(0, 0, 0, 0.2) !important;
+	&:hover{
+		background-color: rgba(0, 0, 0, 0.4)  !important;
+	}
+	.inset{
+		padding: 7px 9px;
+	}
+}
+#menuTogglerSmallCont{
+	position: absolute;
+	left: 0;
+	top: 0;
+	height: 100%;
+	width: 50px;
+	background-color: $menu-bg-2;
+}

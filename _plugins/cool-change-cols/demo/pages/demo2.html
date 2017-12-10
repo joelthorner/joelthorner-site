@@ -1,0 +1,371 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="Joel Bootstrap Gallery">
+    <meta name="author" content="Joel Thorner">
+
+    <title>Cool Change Cols - JoelThorner</title>
+    <link rel="icon" type="image/png" href="../img/icon.png">
+
+    <!-- Bootstrap Core CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
+    <!-- Demo CSS -->
+    <link rel="stylesheet" href="../css/cool-change-cols.css">
+
+    <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+        <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+        <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+    <![endif]-->
+
+</head>
+
+<body>
+
+    <!-- Navigation -->
+    <nav class="navbar navbar-inverse navbar-static-top" role="navigation">
+        <div class="container">
+            <!-- Brand and toggle get grouped for better mobile display -->
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+                    <span class="sr-only">Toggle navigation</span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+                <a class="navbar-brand" href="http://joelthorner.com/cool-change-cols/view/1-5-0">Cool change cols <span class="badge badge-primary">v1.5.0</span></a>
+            </div>
+            <!-- Collect the nav links, forms, and other content for toggling -->
+            <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+                <ul class="nav navbar-nav">
+                    <li>
+                        <a href="../index.html">Documentation</a>
+                    </li>
+                    <li>
+                        <a href="demo1.html">Demo 1</a>
+                    </li>
+                    <li class="active">
+                        <a href="demo2.html">Demo 2</a>
+                    </li>
+                    <li>
+                        <a href="demo3.html">Demo 3</a>
+                    </li>
+                </ul>
+            </div>
+            <!-- /.navbar-collapse -->
+        </div>
+        <!-- /.container -->
+    </nav>
+
+
+    <!-- Page Content -->
+    <div class="container">
+        <!--controls-->
+        <div class="row">
+            <div class="col-md-4" id="controls">
+                <div class="well">
+                    <button type="button" 
+                            class="btn btn-primary"
+                            data-ccc-view-name="view1" 
+                            data-ccc-item-view="col-lg-2 col-md-2 col-sm-2 col-xs-2 view1 itemDemoChange"
+                            >view1</button>
+
+                    <button type="button" 
+                            class="btn btn-primary"
+                            data-ccc-view-name="view2" 
+                            data-ccc-item-view="col-lg-3 col-md-3 col-sm-3 col-xs-3 view2 itemDemoChange"
+                            >view2</button>
+
+                    <button type="button" 
+                            class="btn btn-primary"
+                            data-ccc-view-name="view3" 
+                            data-ccc-item-view="col-lg-6 col-md-6 col-sm-6 col-xs-6 view3 itemDemoChange"
+                            >view3</button>
+
+                    <button type="button" 
+                            class="btn btn-danger"
+                            onclick="Cookies.remove('demo2-cookie');$('#cookieOutput').text('undefined');"
+                            >Clear Cookie</button>
+                    <p>
+                        <span class="info">Cookie: </span> '<span id="cookieOutput"></span>'
+                    </p>
+                </div>
+            </div>
+
+            <div class="col-md-8">
+                <div class="well">
+                    <a class="btn btn-primary btn-block" role="button" data-toggle="collapse" href="#collapseExample" aria-expanded="false" aria-controls="collapseExample">
+                        View code example
+                    </a>
+                    <div class="collapse" id="collapseExample">
+
+<pre class="prettyprint">
+$.fn.coolChangeCols({
+
+    nameCookie : 'demo2-cookie',             // name of cookie required
+    activeDefault : 'view2',                 // one value of elements with data-ccc-view-name attribute
+    classActiveButton : 'active',            // class of view active into control element
+    cookieDays : 1,                          // time of view persist in days
+    itemToChangeSelector :'.itemDemoChange', // selector of all items to change view
+    effect : true,
+    timeEffect : 300,
+    
+    //events
+
+    afterChangeView : function (view){
+        $("#cookieOutput").text(view);
+    },
+
+    afterLoadView : function (view){
+        $("#cookieOutput").text(view);
+    }
+});
+</pre>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!--end controls-->
+
+        <div class="row itemsContainer">
+            <div class="itemDemoChange">
+                <div class="thumbnail">
+                    <img class="img-responsive" src="../img/g1.svg" alt="">
+                    <div class="caption">
+                        <h3>Item 1</h3>
+                        <p>
+                            
+                            <br/>
+                            <small>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum sit amet lacus et tortor hendrerit facilisis. Curabitur orci justo, suscipit non tincidunt in, accumsan vel leo.</small>
+                        </p>
+                        
+                    </div>
+                </div>
+            </div>
+            <div class="itemDemoChange">
+                <div class="thumbnail">
+                    <img class="img-responsive" src="../img/g2.svg" alt="">
+                    <div class="caption">
+                        <h3>Item 2</h3>
+                        <p>
+                            
+                            <br/>
+                            <small>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum sit amet lacus et tortor hendrerit facilisis. Curabitur orci justo, suscipit non tincidunt in, accumsan vel leo.</small>
+                        </p>
+                        
+                    </div>
+                </div>
+            </div>
+            <div class="itemDemoChange">
+                <div class="thumbnail">
+                    <img class="img-responsive" src="../img/g3.svg" alt="">
+                    <div class="caption">
+                        <h3>Item 3</h3>
+                        <p>
+                            
+                            <br/>
+                            <small>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum sit amet lacus et tortor hendrerit facilisis. Curabitur orci justo, suscipit non tincidunt in, accumsan vel leo.</small>
+                        </p>
+                        
+                    </div>
+                </div>
+            </div>
+            <div class="itemDemoChange">
+                <div class="thumbnail">
+                    <img class="img-responsive" src="../img/g4.svg" alt="">
+                    <div class="caption">
+                        <h3>Item 4</h3>
+                        <p>
+                            
+                            <br/>
+                            <small>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum sit amet lacus et tortor hendrerit facilisis. Curabitur orci justo, suscipit non tincidunt in, accumsan vel leo.</small>
+                        </p>
+                        
+                    </div>
+                </div>
+            </div>
+            <div class="itemDemoChange">
+                <div class="thumbnail">
+                    <img class="img-responsive" src="../img/h1.svg" alt="">
+                    <div class="caption">
+                        <h3>Item 5</h3>
+                        <p>
+                            
+                            <br/>
+                            <small>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum sit amet lacus et tortor hendrerit facilisis. Curabitur orci justo, suscipit non tincidunt in, accumsan vel leo.</small>
+                        </p>
+                        
+                    </div>
+                </div>
+            </div>
+            <div class="itemDemoChange">
+                <div class="thumbnail">
+                    <img class="img-responsive" src="../img/h2.svg" alt="">
+                    <div class="caption">
+                        <h3>Item 6</h3>
+                        <p>
+                            
+                            <br/>
+                            <small>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum sit amet lacus et tortor hendrerit facilisis. Curabitur orci justo, suscipit non tincidunt in, accumsan vel leo.</small>
+                        </p>
+                        
+                    </div>
+                </div>
+            </div>
+            <div class="itemDemoChange">
+                <div class="thumbnail">
+                    <img class="img-responsive" src="../img/h3.svg" alt="">
+                    <div class="caption">
+                        <h3>Item 7</h3>
+                        <p>
+                            
+                            <br/>
+                            <small>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum sit amet lacus et tortor hendrerit facilisis. Curabitur orci justo, suscipit non tincidunt in, accumsan vel leo.</small>
+                        </p>
+                        
+                    </div>
+                </div>
+            </div>
+            <div class="itemDemoChange">
+                <div class="thumbnail">
+                    <img class="img-responsive" src="../img/h4.svg" alt="">
+                    <div class="caption">
+                        <h3>Item 8</h3>
+                        <p>
+                            
+                            <br/>
+                            <small>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum sit amet lacus et tortor hendrerit facilisis. Curabitur orci justo, suscipit non tincidunt in, accumsan vel leo.</small>
+                        </p>
+                        
+                    </div>
+                </div>
+            </div>
+            <div class="itemDemoChange">
+                <div class="thumbnail">
+                    <img class="img-responsive" src="../img/j1.svg" alt="">
+                    <div class="caption">
+                        <h3>Item 9</h3>
+                        <p>
+                            
+                            <br/>
+                            <small>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum sit amet lacus et tortor hendrerit facilisis. Curabitur orci justo, suscipit non tincidunt in, accumsan vel leo.</small>
+                        </p>
+                        
+                    </div>
+                </div>
+            </div>
+            <div class="itemDemoChange">
+                <div class="thumbnail">
+                    <img class="img-responsive" src="../img/j2.svg" alt="">
+                    <div class="caption">
+                        <h3>Item 10</h3>
+                        <p>
+                            
+                            <br/>
+                            <small>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum sit amet lacus et tortor hendrerit facilisis. Curabitur orci justo, suscipit non tincidunt in, accumsan vel leo.</small>
+                        </p>
+                        
+                    </div>
+                </div>
+            </div>
+            <div class="itemDemoChange">
+                <div class="thumbnail">
+                    <img class="img-responsive" src="../img/j3.svg" alt="">
+                    <div class="caption">
+                        <h3>Item 11</h3>
+                        <p>
+                            
+                            <br/>
+                            <small>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum sit amet lacus et tortor hendrerit facilisis. Curabitur orci justo, suscipit non tincidunt in, accumsan vel leo.</small>
+                        </p>
+                        
+                    </div>
+                </div>
+            </div>
+            <div class="itemDemoChange">
+                <div class="thumbnail">
+                    <img class="img-responsive" src="../img/j4.svg" alt="">
+                    <div class="caption">
+                        <h3>Item 12</h3>
+                        <p>
+                            
+                            <br/>
+                            <small>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum sit amet lacus et tortor hendrerit facilisis. Curabitur orci justo, suscipit non tincidunt in, accumsan vel leo.</small>
+                        </p>
+                        
+                    </div>
+                </div>
+            </div>
+
+        </div>
+
+        <hr>
+
+        <!-- Footer -->
+        <footer>
+            <div class="col-lg-12">
+                <p class="pull-left">Copyright &copy; JoelThorner 2016</p>
+                <p class="pull-right"><a href="https://twitter.com/joelthorner" target="_blank">@joelthorner</a></p>
+            </div>
+        </footer>
+
+    </div>
+    <!-- /.container -->
+
+    <!-- jQuery -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
+
+    <!-- Code highlighter-->
+    <script src="../code_highlighter/google-code-prettify/prettify.js"></script>
+
+    <!-- Bootstrap Core JavaScript -->
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
+
+    <!--Cookie js-->
+    <script src="../js/js.cookie.js"></script>
+    
+    <!--Joel Bootstrap Gallery Lib -->
+    <script src="../js/cool-change-cols.js"></script>
+
+
+    <!-- demo -->
+    <script type="text/javascript">
+        
+        $.fn.coolChangeCols({
+
+            nameCookie : 'demo2-cookie',             // name of cookie required
+            activeDefault : 'view2',                 // one value of elements with data-ccc-view-name attribute
+            classActiveButton : 'active',            // class of view active into control element
+            cookieDays : 1,                          // time of view persist in days
+            itemToChangeSelector :'.itemDemoChange', // selector of all items to change view
+            effect : true,
+            timeEffect : 300,
+            
+            //events
+            beforeLoadView : function (view){
+                $("#cookieOutput").text(view);
+            },
+
+            afterChangeView : function (view){
+                $("#cookieOutput").text(view);
+            },
+
+            afterLoadView : function (view){
+                $("#cookieOutput").text(view);
+            }
+        });
+
+        //code demo examples
+        prettyPrint();
+
+    </script>
+
+</body>
+
+</html>

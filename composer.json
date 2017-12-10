@@ -1,0 +1,8 @@
+{
+   "name": "joelthorner/joelthorner",
+   "require": {
+       "guzzlehttp/guzzle": "~6.0",
+       "knplabs/github-api": "~1.4",
+       "michelf/php-markdown": "~1.6"
+   }
+}

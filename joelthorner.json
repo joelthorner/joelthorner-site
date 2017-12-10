@@ -1,0 +1,168 @@
+{
+	"menu": {
+		"home": {
+			"name" : "Home",
+			"icon" : "<i class='material-icons'>&#xE88A;</i>",
+			"url"  : ""
+		},
+		"plugins" : {
+			"name" : "Plugins",
+			"icon" : "<i class='material-icons'>&#xE86F;</i>",
+			"url"  : "plugins",
+			"submenus" : {
+				"cool-change-cols" : {
+					"name" : "Cool change cols",
+					"url" : "plugin/cool-change-cols"
+				},
+				"simple-bt-checks" : {
+					"name" : "Simple bt checks",
+					"url" : "plugin/simple-bt-checks"
+				}
+			}
+		},
+		"snippets": {
+			"name" : "Snippets",
+			"icon" : "<i class='material-icons'>&#xE89A;</i>",
+			"url"  : "snippets"
+		},
+		"tags" : {
+			"name" : "Tags",
+			"icon" : "<i class='material-icons'>&#xE241;</i>",
+			"url"  : "tags"
+		}
+
+	},
+	"_app" : {
+		"name" : "Apps",
+		"icon" : "<i class='material-icons'>&#xE5C3;</i>",
+		"url"  : "apps"
+	},
+
+	"_new_repo" : "dins de repos i primer",
+	"repos" : {
+		"cool-change-cols" : {
+			"gitOwner" : "joelthorner",
+			"gitRepo" : "cool-change-cols",
+			"workType" : "plugin",
+			"_examples--workType" : "plugin,snippet,app",
+			"image" : "img/icons/ccc.jpg",
+			"tags" : "bootstrap,jquery",
+			"source" : "_plugins/cool-change-cols/demo/pages/demo1.html",
+			"searchKeys" : "Cool change cols, columns colummns bootstrap"
+		},
+		"next-level-cards" : {
+			"gitOwner" : "joelthorner",
+			"gitRepo" : "next-level-cards",
+			"workType" : "snippet",
+			"image" : "img/icons/nlc.jpg",
+			"tags" : "html,bootstrap,scss,bootstrap-4,jquery",
+			"source" : "_snippets/next-level-cards/demo/index.html",
+			"searchKeys" : "Next level cards, bootstrap 4 card"
+		},
+		"windows-10-menu" : {
+			"gitOwner" : "joelthorner",
+			"gitRepo" : "windows-10-menu",
+			"workType" : "snippet",
+			"image" : "img/icons/windows-10-menu.jpg",
+			"tags" : "html,jquery,responsive,scss",
+			"source" : "_snippets/windows-10-menu/demo/index.html",
+			"searchKeys" : "windows 10 menu, ui"
+		},
+		"simple-bt-checks" : {
+			"gitOwner" : "joelthorner",
+			"gitRepo" : "simple-bt-checks",
+			"workType" : "plugin",
+			"image" : "img/icons/sbc.jpg",
+			"tags" : "bootstrap,css,jquery",
+			"source" : "_plugins/simple-bt-checks/demo/index.html",
+			"searchKeys" : "simple bootstrap bt checks check checkbox html inputs"
+		},
+		"ultra-nav-bootstrap-4" : {
+			"gitOwner" : "joelthorner",
+			"gitRepo" : "ultra-nav-bootstrap-4",
+			"workType" : "snippet",
+			"image" : "img/icons/ultra-nav-bootstrap-4.jpg",
+			"tags" : "html,bootstrap,scss,bootstrap-4,jquery,responsive",
+			"source" : "_snippets/ultra-nav-bootstrap-4/demo/index.html",
+			"searchKeys" : "ultra nav bootstrap 4, navbar menu top menu fixed"
+		},
+		"_structure" : {
+			"gitOwner" 		: "",
+			"gitRepo" 		: "",
+			"workType" 		: "",
+			"image" 			: "",
+			"tags" 			: "",
+			"source" 		: "",
+			"searchKeys" 	: ""
+		}
+
+	},
+
+	"home": {
+		"items": {
+			
+			"slider-llarg": {
+				"type": "slider-100",
+				"name": "slider-top",
+				"sliderItems": {
+					"1": {
+						"alt" : "Joelthorner slider image 1",
+						"lg": "img/slider/3_l.jpg",
+						"md": "img/slider/3_m.jpg",
+						"xs": "img/slider/3_s.jpg",
+						"title" : "<h1>Joelthorner</h1>",
+						"content" : "<h2>I'm a web developer.<br>I love frontend programing and create javascript plugins.<br>Now without time, playing to pokemon go and working hard for help unicorns.</h2><a href='#go-to-content' title='Go to content' class='btn-outiline anchor-effect'>My work</a>",
+						"footer" : ""
+					},
+					"2": {
+						"alt" : "Joelthorner slider image 2",
+						"lg": "img/slider/2_l.jpg",
+						"md": "img/slider/2_m.jpg",
+						"xs": "img/slider/2_s.jpg",
+						"footer" : ""
+					}
+				}
+			},
+
+			"bigsquare-1" : {
+				"type": "block-2x2",
+				"repo" : "cool-change-cols"
+			},
+
+			"bigsquare-2" : {
+				"type": "block-2x2",
+				"repo" : "next-level-cards"
+			},
+
+			"bigsquare-3" : {
+				"type": "block-2x2",
+				"repo" : "simple-bt-checks"
+			},
+
+			"container1x2-open" :{ "type" : "open-1x2" },
+			
+			"smallSquare-1" : {
+				"type": "block-1x1",
+				"repo" : "windows-10-menu"
+			},
+
+			"smallSquare-2" : {
+				"type": "block-1x1",
+				"repo" : "ultra-nav-bootstrap-4"
+			},
+
+			"container1x2-close" :{ "type" : "close-1x2" },
+
+			"column-liked" : {
+				"type" : "block-1x3",
+				"lastGitStars" : 14	
+			},
+
+			"tags-footer" : {
+				"type" : "block-3x1",
+				"maxTags" : 30	
+			}
+
+		}
+	}
+}
